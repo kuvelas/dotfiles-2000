@@ -1,0 +1,27 @@
+#! /bin/sh
+
+case "$1" in
+  start)
+		/usr/bin/mount.s3ql s3://us-west-2/atomic-storage ~/s3-storage --authfile ~/.s3ql-auth
+    ;;
+  stop)
+		/usr/bin/umount.s3ql ~/s3-storage
+    ;;
+	fix)
+		/usr/bin/umount.s3ql /home/mike/s3-storage
+		/usr/bin/fsck.s3ql s3://us-west-2/atomic-storage --authfile ~/.s3ql-auth
+		/usr/bin/mount.s3ql s3://us-west-2/atomic-storage ~/s3-storage --authfile /home/mike/.s3ql-auth
+    ;;
+  *)
+    exit 1
+    ;;
+esac
+
+exit 0
+
+#~/.s3ql-auth
+#[atomic-storage]
+#storage-url: s3://us-west-2/atomic-storage
+#backend-login: 
+#backend-password: 
+#fs-passphrase: 

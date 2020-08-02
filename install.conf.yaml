@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.config/i3/config: config/i3/config
+    ~/.config/i3/images: config/i3/images
+    ~/.config/i3/polybar: config/i3/polybar
+
+- create:
+    - ~/git
+    - ~/Dropbox
+    - ~/s3-storage
+    - ~/tmpvim
+    - ~/config/i3
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,1 @@
+/home/mike/git/dotfiles/config/polybar/start.sh
