@@ -10,6 +10,7 @@
     ~/.config/i3/config: config/i3/config
     ~/.config/images: config/images
     ~/.config/polybar: config/polybar
+    ~/.fonts: fonts
 
 - create:
     - ~/git
