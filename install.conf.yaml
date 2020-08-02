@@ -8,8 +8,8 @@
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.config/i3/config: config/i3/config
-    ~/.config/i3/images: config/i3/images
-    ~/.config/i3/polybar: config/i3/polybar
+    ~/.config/images: config/images
+    ~/.config/polybar: config/polybar
 
 - create:
     - ~/git
