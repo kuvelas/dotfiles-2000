@@ -4,13 +4,15 @@
 
 - clean: ['~']
 
-- link:
-    ~/.tmux.conf: tmux.conf
-    ~/.vimrc: vimrc
-    ~/.config/i3/config: config/i3/config
-    ~/.config/images: config/images
-    ~/.config/polybar: config/polybar
-    ~/.fonts: fonts
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  -
+    command: ./dependencies-ubuntu
+    stdout: true
+    stderr: true
+    description: Install dependencies
+    quiet: false
+
 
 - create:
     - ~/git
@@ -19,5 +21,23 @@
     - ~/tmpvim
     - ~/config/i3
 
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.config/i3/config: config/i3/config
+    ~/.config/images: config/images
+    ~/.config/polybar: config/polybar
+    ~/.config/rofi: config/rofi
+    ~/.fonts: fonts
+
+
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+  -
+    command: ./final-steps-ubuntu
+    stdout: true
+    stderr: true
+    description: Final Steps
+    quiet: false
+
+

@@ -32,7 +32,7 @@ bindsym $mod+Shift+q kill
 
 # start program launcher
 #bindsym $mod+d exec --no-startup-id ofi -show run
-bindsym $mod+d exec "rofi -show drun -switchers combi -combi-modi window,run -theme oxide"
+bindsym $mod+d exec "rofi -show drun -switchers combi -combi-modi window,run -theme custom"
 
 # change focus
 bindsym $mod+j focus left
