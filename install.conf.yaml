@@ -24,12 +24,14 @@
 
 - link:
     ~/.tmux.conf: tmux.conf
+    ~/.zshrc: zshrc
     ~/.vimrc: vimrc
     ~/.config/i3/config: config/i3/config
     ~/.config/images: config/images
     ~/.config/polybar: config/polybar
     ~/.config/rofi: config/rofi
     ~/.fonts: fonts
+    ~/.fehbg: fehbg
 
 
 - shell:

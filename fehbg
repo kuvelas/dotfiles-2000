@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale --no-xinerama '/home/mike/.config/images/backgrounds/737.png' 
