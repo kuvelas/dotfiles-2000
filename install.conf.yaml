@@ -32,6 +32,7 @@
     ~/.config/rofi: config/rofi
     ~/.fonts: fonts
     ~/.fehbg: fehbg
+    ~/.Xdefaults: Xdefaults
 
 
 - shell:

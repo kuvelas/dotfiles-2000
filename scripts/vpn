@@ -1,0 +1,25 @@
+#! /bin/sh
+case "$1" in
+  start)
+    wg-quick up mullvad-us5
+    ;;
+  stop)
+    wg-quick down mullvad-us5
+    ;;
+  check)
+
+    CHECK=$(ip link | grep mullvad)
+    if [ "$CHECK"  = "" ]
+    then
+      echo "not connected"
+    else
+      echo "connected"
+    fi
+    ;;
+  *)
+    exit 1
+    ;;
+esac
+
+exit 0
+
