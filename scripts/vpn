@@ -16,6 +16,16 @@ case "$1" in
       echo "connected"
     fi
     ;;
+  toggle)
+    CHECK=$(ip link | grep mullvad)
+    if [ "$CHECK"  = "" ]
+    then
+      wg-quick up mullvad-us5
+    else
+      echo "connected"
+    wg-quick down mullvad-us5
+    fi
+    ;;
   *)
     exit 1
     ;;

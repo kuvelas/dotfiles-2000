@@ -29,7 +29,7 @@ font-2 = "Font Awesome 5 Brands:size=10;1"
 
 modules-left = i3 
 modules-center = 
-modules-right = sc-api pogo-api
+modules-right = sc-api pogo-api wireguard
 ;modules-right = powermenu 
 
 ;tray-position =
@@ -217,3 +217,11 @@ click-left = urxvt -pixmap "$HOME/.config/images/stevens.png;style=centered" -e 
 type = custom/text
 content = " pogo-api "
 click-left = urxvt -pixmap "$HOME/.config/images/pogo.png;style=centered" -e zsh -c $HOME/git/stevens-environment-files/POGO-API/devPogo; sleep 1000 &
+
+[module/wireguard]
+type = custom/script
+label = %output%
+exec = ~/scripts/vpn check
+interval = 5
+click-left = sudo ~/scripts/vpn toggle
+
