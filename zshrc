@@ -79,3 +79,5 @@ load-nvmrc
 
 
 HISTTIMEFORMAT="%d/%m/%y %T "
+
+xbindkeys -p

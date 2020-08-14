@@ -1,5 +1,6 @@
 #!/bin/bash
 
 #install vim plugins
-#vim +PluginInstall +qall
+vim +PluginInstall +qall
+reset
 
