@@ -39,6 +39,7 @@ sudo apt install -y feh
 sudo apt install -y eog
 sudo apt install -y xbindkeys xsel xdotool
 sudo apt install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+sudo apt install -y indent
 
 
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then

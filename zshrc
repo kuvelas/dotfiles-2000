@@ -1,6 +1,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
-export ANDROID_HOME=$HOME/android_sdk/
-#export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
+export ANDROID_HOME=$HOME/android/android_sdk/
+export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 export PATH="${PATH}:${ANDROID_HOME}tools/:${ANDROID_HOME}platform-tools/"
 
 export NVM_DIR="$HOME/.nvm"
@@ -81,3 +81,9 @@ load-nvmrc
 HISTTIMEFORMAT="%d/%m/%y %T "
 
 xbindkeys -p
+
+###-tns-completion-start-###
+if [ -f /home/mike/.tnsrc ]; then 
+    source /home/mike/.tnsrc 
+fi
+###-tns-completion-end-###

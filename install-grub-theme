@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /tmp
+git clone https://github.com/vinceliuice/grub2-themes
+cd grub2-themes
+sudo ./install.sh -v -2
