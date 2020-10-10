@@ -48,11 +48,7 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
 fi
 
 
-#ohmyzsh
-if [ ! -d ~/.oh-my-zsh ]; then
-  echo "Installing oh my zsh"
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
+./scripts/install/install-ohmyzsh
 
 #nvm
 if [ ! -d ~/.nvm ]; then
@@ -69,35 +65,14 @@ if [ "$HAS_SPEED_RICER" == "" ]; then
   sudo apt-get install i3-gaps-wm
 fi
 
-#wine
-HAS_WINEHQ=$(apt-cache policy | grep 'dl.winehq.org')
-if [ "$HAS_WINEHQ" == "" ]; then
-  echo "Installing Wine"
-  sudo dpkg --add-architecture i386
-  wget -O /tmp/winehq.key https://dl.winehq.org/wine-builds/winehq.key
-  sudo apt-key add /tmp/winehq.key
-  sudo add-apt-repository "deb https://dl.winehq.org/wine-builds/ubuntu/ $CODENAME main"
-  sudo apt update
-  sudo apt install --install-recommends winehq-stable -y
-fi
-
-
 #i3 topbar
 if [ ! -f "$(which bumblebee-status)" ]; then
   echo "Installing bumblebee-status"
   pip3 install --user bumblebee-status
 fi
 
-
-#Joplin 
-if [ ! -d ~/.joplin ]; then
-  wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
-fi
-
-
-#Bitwarden
-if [ ! -d ~/.config/Bitwarden ]; then
-  sudo snap install bitwarden
-fi
+./scripts/install/install-wine
+./scripts/install/install-joplin
+./scripts/install/install-bitwarden
 
 echo "dependecies-ubuntu end"

@@ -11,8 +11,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
 "ASYNCHRONOUS LINT ENGINE
 Plugin 'dense-analysis/ale'
+
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
@@ -22,7 +24,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'stanangeloff/php.vim'
 Plugin 'roxma/vim-paste-easy'
 Plugin 'ap/vim-css-color'
-Plugin 'krasjet/auto.pairs'
+
 Plugin 'jiangmiao/auto-pairs'
 
 
@@ -33,7 +35,7 @@ Plugin 'alvan/vim-closetag'
 
 "themes
 Plugin 'morhetz/gruvbox'
-Plugin 'crusoexia/vim-monokai'
+Plugin 'arcticicestudio/nord-vim'
 Plugin 'vim-airline/vim-airline-themes'
 
 "F7 tagbar
@@ -42,6 +44,8 @@ Plugin 'Perlence/tstags'
 
 "F8 nerdtree
 Plugin 'scrooloose/nerdtree'
+
+"Plugin 'valloric/youcompleteme'
   
 
 " Airline
@@ -230,12 +234,11 @@ set dir=~/tmpvim
 :command Qa qa
 :command WQa wqa
 :command Wqa wqa
-":colorscheme monokai
 "
 
 
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_number_column = 'bg1'
-:colorscheme gruvbox
+"let g:gruvbox_contrast_dark = 'hard'
+"let g:gruvbox_number_column = 'bg1'
+:colorscheme nord
 
 

@@ -15,11 +15,12 @@ new_float normal
 
 hide_edge_borders none
 
-bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
 
-font xft:URWGothic-Book 11
+#bindsym $mod+u border none
+#bindsym $mod+y border pixel 1
+#bindsym $mod+n border normal
+
+font xft:Hack Nerd Font 11
 
 floating_modifier $mod
 
@@ -33,6 +34,16 @@ bindsym $mod+Shift+q kill
 # start program launcher
 #bindsym $mod+d exec --no-startup-id ofi -show run
 bindsym $mod+d exec "rofi -show drun -switchers combi -combi-modi window,run -theme custom"
+
+
+# dropdown terminal
+#exec --no-startup-id urxvt -n dropdown -e zsh
+#bindsym $mod+u scratchpad show; [instance="dropdown"] move position center
+#for_window [instance="dropdown"] floating enable
+#for_window [instance="dropdown"] resize set 400 400
+#for_window [instance="dropdown"] move scratchpad
+#for_window [instance="dropdown"] border pixel 10
+
 
 # change focus
 bindsym $mod+j focus left
@@ -155,21 +166,9 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 
-# Open specific applications in personal workspace
-for_window [class="microsoft teams - "] move to workspace $ws2
-for_window [class="microsoft teams - preview"] move to workspace $ws2
-for_window [class="Microsoft Teams - Preview"] move to workspace $ws2
-for_window [class="- Skype"] move to workspace $ws2
-for_window [class="Slack"] move to workspace $ws2
-#for_window [class="DBeaver"] move to workspace $ws9
-
-#assign [class="DBeaver"] $ws9
-for_window [class="DBeaver"] move workspace $ws9
-for_window [class="DBeaver "] move workspace $ws9
-for_window [title="DBeaver"] move workspace $ws9
-for_window [title="DBeaver "] move workspace $ws9
-
-
+assign [class="^DBeaver$"] $ws9
+assign [class="^Slack$"] $ws2
+assign [class="^Microsoft Teams - Preview$"] $ws2
 
 
 # Open specific applications in floating mode
@@ -181,14 +180,9 @@ for_window [class="Calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
-for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-gtk-greeter-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
-for_window [title="MuseScore: Play Panel"] floating enable
-for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
 for_window [title="About Pale Moon"] floating enable
@@ -197,11 +191,8 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
-for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
 for_window [class="Thus"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
-#for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
 for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable
@@ -218,7 +209,6 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="app"] floating enable
 for_window [window_role="app" class="Vivaldi-snapshot"] floating disable
 for_window [window_role="task_dialog"] floating enable
-for_window [window_role="News-BlogSubscriptions"] floating enable
 for_window [title="Preferences$"] floating enable
 
 
@@ -248,6 +238,22 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+
+
+exec urxvt -name cmus -fn "xft:ProggyCleanTT Nerd Font:pixelsize=26" -pixmap "$HOME/.config/images/music.png;style=centered" -cd ~/Music -e cmus
+for_window [class="URxvt" instance="cmus"] move to scratchpad, border 1pixel
+
+exec $HOME/.local/bin/obsidian
+for_window [class="obsidian"] move to scratchpad, border 1pixel
+
+bindsym $mod+m [instance="cmus"] scratchpad show
+bindsym $mod+n [class="obsidian"] scratchpad show
+
+
+
+#exec_always --no-startup-id xfce4-power-manager
+
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
@@ -329,8 +335,7 @@ gaps outer 5
 gaps top 5
 gaps bottom 5
 
-smart_gaps on
-
+#smart_gaps on
 
 for_window [class="^.*"] border pixel $border_size
 
@@ -374,7 +379,7 @@ mode "$mode_gaps_outer" {
 
 bar {
 
-	font pango:DejaVu PowerlineSymbols Sans Book 12
+  font xft:Hack Nerd Font 10
 
 	position top
 	status_command ~/.local/bin/bumblebee-status \

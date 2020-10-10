@@ -1,0 +1,133 @@
+:root {
+  --background: #1B1B1B;
+  --syn: #81A1C1;
+  --symbol:#B48EAD;
+  --name:#EBCB8B;
+  --value: #A3BE8C;
+  --type:#ECEFF4;
+  --prompt: #bd93f9;
+}
+
+
+::-moz-selection {
+  color: white;
+  background: var(--name);
+}
+
+::selection {
+  color: white;
+  background: var(--name);
+}
+
+html,
+body {
+  font-family: "Hack Nerd Font";
+  background: var(--background);
+  color: white;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 50px 0;
+}
+
+img {
+  margin-bottom: -2px;
+  height: 16px;
+  width: 16px;
+}
+
+.prompt {
+  color: var(--background);
+  background: var(--prompt);
+  padding: 0px 10px;
+  margin-right: 10px;
+}
+
+.prompt-text {
+  color: var(--prompt);
+}
+
+.syn {
+  color: var(--syn);
+}
+
+.symbol {
+  color: var(--symbol);
+}
+
+.types {
+  color: var(--type);
+}
+
+.name {
+  color: var(--name);
+}
+
+.value {
+  color: var(--value);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 5px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover:after {
+  content: "<-";
+}
+
+form {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="search"] {
+  background: transparent;
+  padding: 10px 20px;
+  color: var(--name);
+  font-weight: 500;
+  font-family: "Hack Nerd Font";
+  display: inline-block;
+  border: none;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+input[type="search"]:hover,
+input[type="search"]:active,
+input[type="search"]:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  font-size: 0.9em;
+  font-family: "Hack Nerd Font";
+}
+
+@media screen and (max-width: 1500px) {
+  body {
+    font-size: 1em;
+  }
+
+  .container {
+    padding: 25px 50px;
+  }
+}

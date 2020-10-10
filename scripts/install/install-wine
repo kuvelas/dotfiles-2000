@@ -1,0 +1,14 @@
+#!/bin/bash
+
+HAS_WINEHQ=$(apt-cache policy | grep 'dl.winehq.org')
+if [ "$HAS_WINEHQ" == "" ]; then
+  echo "Installing Wine"
+  sudo dpkg --add-architecture i386
+  wget -O /tmp/winehq.key https://dl.winehq.org/wine-builds/winehq.key
+  sudo apt-key add /tmp/winehq.key
+  sudo add-apt-repository "deb https://dl.winehq.org/wine-builds/ubuntu/ $CODENAME main"
+  sudo apt update
+  sudo apt install --install-recommends winehq-stable -y
+fi
+
+

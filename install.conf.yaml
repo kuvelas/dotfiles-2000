@@ -30,6 +30,7 @@
     ~/.config/images: config/images
     ~/.config/polybar: config/polybar
     ~/.config/rofi: config/rofi
+    ~/.config/ranger: config/ranger
     ~/.fonts: fonts
     ~/.fehbg: fehbg
     ~/.Xdefaults: Xdefaults
