@@ -32,10 +32,10 @@ body {
 }
 
 .container {
-  width: 90vw;
+  width: 95vw;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 50px 0;
+  padding: 10px 0;
 }
 
 img {
@@ -130,4 +130,13 @@ input::placeholder {
   .container {
     padding: 25px 50px;
   }
+}
+
+.clock-area{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.25em;
+
 }
