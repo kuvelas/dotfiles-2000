@@ -1,0 +1,3 @@
+#!/bin/bash
+aws s3 sync . s3://atomic-software.io/termpage --profile atomic --acl public-read
+aws cloudfront create-invalidation --distribution-id E28XD84K9WEXGJ --paths / --profile atomic

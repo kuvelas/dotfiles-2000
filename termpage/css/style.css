@@ -140,3 +140,14 @@ input::placeholder {
   font-size: 1.25em;
 
 }
+.btn{
+  background-color: var(--background);
+  border: none;
+  color: var(--syn);
+  padding: 5px 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}

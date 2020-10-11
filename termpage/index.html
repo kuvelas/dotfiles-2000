@@ -4,49 +4,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termpage</title>
+    <title>TermPage</title>
     <link rel="shortcut icon" href="./img//terminal.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-
     <div class="container">
-
-
-      <pre>
- ▄▄▄      ▄▄▄█████▓ ▒█████   ███▄ ▄███▓ ██▓ ▄████▄  
-▒████▄    ▓  ██▒ ▓▒▒██▒  ██▒▓██▒▀█▀ ██▒▓██▒▒██▀ ▀█  
-▒██  ▀█▄  ▒ ▓██░ ▒░▒██░  ██▒▓██    ▓██░▒██▒▒▓█    ▄ 
-░██▄▄▄▄██ ░ ▓██▓ ░ ▒██   ██░▒██    ▒██ ░██░▒▓▓▄ ▄██▒
- ▓█   ▓██▒  ▒██▒ ░ ░ ████▓▒░▒██▒   ░██▒░██░▒ ▓███▀ ░
- ▒▒   ▓▒█░  ▒ ░░   ░ ▒░▒░▒░ ░ ▒░   ░  ░░▓  ░ ░▒ ▒  ░
-  ▒   ▒▒ ░    ░      ░ ▒ ▒░ ░  ░      ░ ▒ ░  ░  ▒   
-  ░   ▒     ░      ░ ░ ░ ▒  ░      ░    ▒ ░░        
-      ░  ░             ░ ░         ░    ░  ░ ░      
-      </pre>
-
-
+      <pre id="message"></pre>
       <span class="clock-area" style="float: right; margin-top: 5px;">
         🕒
         <span class="clock"></span>
       </span>
-
-
-
-
       <p>
-
-
-
-      /var/www/termpage
+      /var/www/html
       <img src="./img/terminal.svg"> cat
       <span class="prompt-text">
-        index.ts
+        termpage.ts
       </span>
-
       </p>
-
       <p>
       <span class="syn">
         const
@@ -55,188 +31,30 @@
         app
       </span>
       <span class="symbol">:</span>
-      <span class="types">Startpage</span>
+      <span class="types">TermPage</span>
       <span class="syn">
         = new
       </span>
       <span class="types">
-        StartPage({
+        TermPage({
       </span>
-
       <ul>
         <li>
           <span class="name">el:</span>
           <span class="value">'#start'</span>
           <span class="name">,</span>
         </li>
-        <li>
-          <span class="name">video: {</span>
-            <ul>
-              <li>
-                <a href="https://youtube.com" rel="noreferrer">
-                  <span class="name">youtube:</span>
-                  <span class="value">'youtube.com'</span>
-                  <span class="name">,</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitch.tv" rel="noreferrer">
-                  <span class="name">twitch:</span>
-                  <span class="value">'twitch.com'</span>
-                  <span class="name">,</span>
-                </a>
-              </li>
-            </ul>
-
-          <span class="name">},</span>
-          <br>
-          <span class="name">pinned: {</span>
-          <ul>
-            <li>
-              <a href="https://reddit.com" rel="noreferrer">
-                <span class="name">reddit:</span>
-                <span class="value">'reddit.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://mail.google.com" rel="noreferrer">
-                <span class="name">gmail:</span>
-                <span class="value">'mail.google.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            
-            <li>
-              <a href="https://portland.craigslist.org/search/sss?query=pinball&sort=rel&search_distance=300&postal=98664" rel="noreferrer">
-                <span class="name">cl-pinball:</span>
-                <span class="value">'portland.craigslist.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://facebook.com" rel="noreferrer">
-                <span class="name">facebook:</span>
-                <span class="value">'facebook.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://pinballvideos.com/" rel="noreferrer">
-                <span class="name">pinballvideos:</span>
-                <span class="value">'pinballvideos.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com" rel="noreferrer">
-                <span class="name">github:</span>
-                <span class="value">'github.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://amazon.com" rel="noreferrer">
-                <span class="name">amazon:</span>
-                <span class="value">'amazon.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://console.aws.amazon.com/?nc2=h_m_mc" rel="noreferrer">
-                <span class="name">aws:</span>
-                <span class="value">'aws.amazon.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.usbankreliacard.com/web/usbankreliacard/login" rel="noreferrer">
-                <span class="name">newrelia:</span>
-                <span class="value">'usbankreliacard.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://best-series.me/" rel="noreferrer">
-                <span class="name">best-series:</span>
-                <span class="value">'best-series.me'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://dev.to" rel="noreferrer">
-                <span class="name">dev.to:</span>
-                <span class="value">'dev.to'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://news.google.com" rel="noreferrer">
-                <span class="name">news:</span>
-                <span class="value">'news.google.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://draw.io" rel="noreferrer">
-                <span class="name">draw.io:</span>
-                <span class="value">'draw.io'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/home" rel="noreferrer">
-                <span class="name">twitter:</span>
-                <span class="value">'twitter.com'</span>
-                <span class="name">,</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="name">}</span>
-        </li>
+        <div id="links"></div>
       </ul>
-      <span class="name">
-        })
-      </span>
-      </p>
-
+      <span class="types"> }); </span>
       <p>
       <form action="https://duckduckgo.com/" method="get">
-
-        /var/www/termpage
+        /var/www/html
         <img src="./img/terminal.svg">
         <input type="search" placeholder="Search" name="q" autofocus>
       </form>
       </p>
     </div>
-
   </body>
-  <script>
-    function currentTime() {
-      document.querySelector(".clock").innerHTML = formatAMPM(new Date()); 
-      var t = setTimeout(function () {
-        currentTime()
-      }, 1000);
-    }
-
-    function formatAMPM(date) {
-      var hours = date.getHours();
-      var minutes = date.getMinutes();
-      var ampm = hours >= 12 ? 'pm' : 'am';
-      hours = hours % 12;
-      hours = hours ? hours : 12; // the hour '0' should be '12'
-      minutes = minutes < 10 ? '0'+minutes : minutes;
-      var sec = date.getSeconds();
-      sec = sec < 10 ? '0'+sec : sec;
-      var strTime = hours + ':' + minutes + ':' + sec + ' ' + ampm;
-      return strTime;
-    }
-
-    currentTime();
-  </script>
-
+  <script src="index.js"></script>
 </html>
